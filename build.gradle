@@ -3,6 +3,16 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 }
+apply plugin: "jacoco"
+jacocoTestCoverageVerification{
+   violationRules{
+          rule{
+               limit {
+                     minimum=0.2
+                  }
+            }
+      }
+ }
 
 group = 'org.sambasoft'
 version = '0.0.1-SNAPSHOT'
